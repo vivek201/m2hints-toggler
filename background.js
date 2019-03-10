@@ -1,6 +1,8 @@
 chrome.runtime.onInstalled.addListener(function () {
     chrome.storage.sync.get('configs', function (data) {
-        reloadRules(data.configs);
+        if (data.configs) {
+            reloadRules(data.configs);
+        }
     });
 
     chrome.pageAction.onClicked.addListener(function (tabs) {
