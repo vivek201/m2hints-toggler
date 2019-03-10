@@ -3,11 +3,12 @@ var i;
 
 chrome.storage.sync.get('configs', function(data) {
     let configs = data.configs;
-    
     let div = document.createElement('div');
-    for (i = 0; i < configs.length; i++) {
-        const config = configs[i];
-        div.appendChild(getFieldSet(i, config));
+    if (configs) {
+        for (i = 0; i < configs.length; i++) {
+            const config = configs[i];
+            div.appendChild(getFieldSet(i, config));
+        }
     }
 
     let saveBtn = document.createElement('button');
