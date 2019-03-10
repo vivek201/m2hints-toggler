@@ -1,7 +1,7 @@
 {
-    "name": "DevTogger for Magento2",
+    "name": "Template Hints Togger for Magento2",
     "version": "1.0",
-    "description": "One click toggler for Magento 2 sites",
+    "description": "One click toggler for template hints Magento 2 sites",
     "permissions": [
         "declarativeContent",
         "activeTab",
